@@ -2,7 +2,7 @@
 
 Name:		warsow-data
 Version:	1.02
-Release:	3
+Release:	4
 Summary:	Data files for Warsow
 # See license.txt in the warsow rpm
 License:	Warsow Content License
