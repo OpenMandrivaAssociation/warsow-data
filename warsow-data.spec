@@ -11,23 +11,27 @@ URL:		http://www.warsow.net/
 #http://www.warsow.net:1337/~warsow/%{version}/
 Source0:	warsow_21_unified.tar.gz
 BuildRequires:	fdupes
+BuildRequires:	dos2unix
+
 Requires:	warsow = %{version}
 
 %description
 Data files (audio, maps, etc.) for Warsow.
 
 
-%setup -qn warsow_21
-find . -type f -perm 0600 -exec chmod 644 {} \;
-find . -type d -perm 0700 -exec chmod 755 {} \;
+%prep
+%setup -q -n warsow_21
+
+rm -rf libs/ warsow* wsw*
+
+dos2unix docs/*.txt
 
 %build
 
 %install
-mkdir -p %{buildroot}%{_libdir}/games/warsow/
-cp -ap basewsw %{buildroot}%{_libdir}/games/warsow/
-fdupes %{buildroot}
+mkdir -p %{buildroot}%{_gamesdatadir}/warsow/
+cp -ap basewsw %{buildroot}%{_gamesdatadir}/warsow/
 
 %files
 %doc docs/*
-%{_libdir}/games/warsow/basewsw
+%{_gamesdatadir}/warsow/
