@@ -30,7 +30,7 @@ dos2unix docs/*.txt
 
 %install
 mkdir -p %{buildroot}%{_gamesdatadir}/warsow/
-cp -ap basewsw %{buildroot}%{_gamesdatadir}/warsow/
+cp -rf basewsw %{buildroot}%{_gamesdatadir}/warsow/
 
 %files
 %doc docs/*
