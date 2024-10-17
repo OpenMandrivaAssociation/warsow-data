@@ -7,7 +7,7 @@ Summary:	Data files for Warsow
 # See license.txt in the warsow rpm
 License:	Warsow Content License
 Group:		Games/Other
-URL:		http://www.warsow.net/
+URL:		https://www.warsow.net/
 #http://www.warsow.net:1337/~warsow/%{version}/
 Source0:	warsow_21_unified.tar.gz
 BuildRequires:	fdupes
